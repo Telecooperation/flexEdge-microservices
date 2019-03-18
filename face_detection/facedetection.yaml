@@ -15,4 +15,4 @@ topology_template:
         inputs: [ image ]
         outputs: [ image ]
         category: /image/object_detection/people/face_detection
-alive_time: 1800
+        alive_time: 1800
