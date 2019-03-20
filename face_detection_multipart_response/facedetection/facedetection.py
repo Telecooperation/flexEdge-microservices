@@ -32,7 +32,7 @@ def detect_face():
         cv2.rectangle(test1, (x, y), (x+w, y+h), (0, 255, 0), 2)
     cv2.imwrite('output.jpg', test1)
     
-    faces_json = json.dumps(faces)
+    faces_json = json.dumps(faces.tolist())
     fields = {}
     fields['image'] = ('output.jpg', open('output.jpg', 'rb'), 'image/jpeg')
     fields['face_rects'] = ('face_rects', faces_json, 'application/json')
