@@ -1,0 +1,18 @@
+tosca_definitions_version: tosca_simple_profile_for_microservices_1_0_0
+
+description: A simple face detection, using open CV.
+
+topology_template:
+  node_templates:
+    object_detection:
+      type: tosca.nodes.microservices.docker_container
+      properties:
+        id: fd01
+        name: facedetection
+        container_port: 5000
+        mem_requirement: 1000
+        directory: facedetection
+        inputs: [ image ]
+        outputs: [ image ]
+        category: /image/object_detection/people/face_detection
+        alive_time: 1800
