@@ -1,0 +1,18 @@
+tosca_definitions_version: tosca_simple_profile_for_microservices_1_0_0
+
+description: The server for the AR-Duel game.
+
+topology_template:
+  node_templates:
+    object_detection:
+      type: tosca.nodes.microservices.docker_container
+      properties:
+        id: gameserv1
+        name: arduel_gameserver
+        container_port: 8881
+        mem_requirement: 100
+        directory: arduel_gamserver
+        inputs: [  ]
+        outputs: [  ]
+        category: /gaming/server/arduel/
+        alive_time: 1800
