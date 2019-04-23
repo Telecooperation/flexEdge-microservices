@@ -12,7 +12,5 @@ topology_template:
         container_port: 8881
         mem_requirement: 100
         directory: arduel_gameserver
-        inputs: [  ]
-        outputs: [  ]
         category: /gaming/server/arduel/
         alive_time: 1800
