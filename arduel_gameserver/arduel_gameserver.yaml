@@ -11,7 +11,7 @@ topology_template:
         name: arduel_gameserver
         container_port: 8881
         mem_requirement: 100
-        directory: arduel_gamserver
+        directory: arduel_gameserver
         inputs: [  ]
         outputs: [  ]
         category: /gaming/server/arduel/
