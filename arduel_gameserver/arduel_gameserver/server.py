@@ -182,7 +182,7 @@ class ThreadedServer(object):
         return gameState["users"].__contains__(address[1])
 
 parser = argparse.ArgumentParser(description='run a game server')
-parser.add_argument('--port', '-p',const=8881, nargs='?',
+parser.add_argument('--port', '-p', const=8881, default=8881, nargs='?',
                     help='the port of the server')
 
 args = parser.parse_args()
