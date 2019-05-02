@@ -1,0 +1,23 @@
+tosca_definitions_version: tosca_simple_profile_for_microservices_1_0_0
+
+description: Template for a object detection application.
+
+topology_template:
+  node_templates:
+    object_detection:
+      type: tosca.nodes.microservices.docker_container
+      properties:
+        id: od01
+        name: object_detection_bottle
+        #container_port: 5000
+        container_ports:
+          - port: 5000
+            protocol: tcp
+            description: port for the internal webserver
+        mem_requirement: 1000
+        directory: object_detection
+        inputs: [ image ]
+        outputs: [ image ]
+        category: /image/object_detection
+        alive_time: 1800
+        wait_for_start: true

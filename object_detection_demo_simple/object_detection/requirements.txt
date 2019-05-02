@@ -1,0 +1,7 @@
+bottle
+numpy
+scipy
+werkzeug
+scikit-image
+tensorflow==1.5
+requests

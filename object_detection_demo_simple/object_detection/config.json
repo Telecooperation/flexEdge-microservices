@@ -1,0 +1,17 @@
+{
+  "api": {
+    "base_code_success": 0,
+    "base_code_object_detection": 1000,
+    "base_code_decorators": 2000
+  },
+  "img_dir": "images",
+  "storage": {
+    "upload_dir": "uploads",
+    "original_dir": "original",
+    "thumbnail_dir": "thumbnail",
+    "output_dir": "output",
+    "allowed_extensions": ["jpg", "jpeg"],
+    "retrieval_limit": 5,
+    "image_url": "{url_root}{img_dir}/{user_id}/{app_name}/{directory}/{image_name}"
+  }
+}

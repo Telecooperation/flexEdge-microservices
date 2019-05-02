@@ -1,0 +1,4 @@
+Flask
+flask-restful
+werkzeug
+requests

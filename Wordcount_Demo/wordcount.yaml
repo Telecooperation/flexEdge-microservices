@@ -1,0 +1,22 @@
+tosca_definitions_version: tosca_simple_profile_for_microservices_1_0_0
+
+description: Template for a wordcount application.
+
+topology_template:
+  node_templates:
+    wordcount:
+      type: tosca.nodes.microservices.docker_container
+      properties:
+        id: wc01
+        name: wordcount
+        #publish_ports: 
+        #  target: 4001
+        #  source: 4001
+        container_port: 4001
+        #host_port: 4001
+        mem_requirement: 50
+        directory: wordcount
+        inputs: [ text_file ]
+        outputs: [ integer ]
+        category: /text/wordcount
+        alive_time: 60
